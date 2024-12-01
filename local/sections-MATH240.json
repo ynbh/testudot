@@ -1,0 +1,338 @@
+[
+  {
+    "course_name": "MATH240",
+    "section_id": "0111",
+    "instructor": "James Conway",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 4,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "8:00am",
+        "endTime": "8:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0111"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0121",
+    "instructor": "James Conway",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 5,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0121"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0131",
+    "instructor": "James Conway",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 7,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0131"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0141",
+    "instructor": "James Conway",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 7,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0141"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0211",
+    "instructor": "Shin Song",
+    "total_seats": 25,
+    "open_seats": 5,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "MATH240-0211"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0221",
+    "instructor": "Shin Song",
+    "total_seats": 25,
+    "open_seats": 9,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "MATH240-0221"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0231",
+    "instructor": "Shin Song",
+    "total_seats": 25,
+    "open_seats": 9,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "MATH240-0231"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0241",
+    "instructor": "Shin Song",
+    "total_seats": 25,
+    "open_seats": 19,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "3:00pm",
+        "endTime": "3:50pm"
+      }
+    ],
+    "custom_course_id": "MATH240-0241"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0311",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 3,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "8:00am",
+        "endTime": "8:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0311"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0312",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 3,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "8:00am",
+        "endTime": "8:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0312"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0321",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 3,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0321"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0322",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 4,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0322"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0331",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 5,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0331"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0332",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 5,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0332"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0341",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 7,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0341"
+  },
+  {
+    "course_name": "MATH240",
+    "section_id": "0342",
+    "instructor": "Archana Khurana",
+    "total_seats": 25,
+    "open_seats": 0,
+    "waitlist_count": 7,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      },
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "MATH240-0342"
+  }
+]

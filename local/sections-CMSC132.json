@@ -1,0 +1,485 @@
+[
+  {
+    "course_name": "CMSC132",
+    "section_id": "0101",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0101"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0102",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 1,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0102"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0103",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0103"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0104",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0104"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0105",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0105"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0201",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 10,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0201"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0202",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 19,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0202"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0203",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 14,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "4:00pm",
+        "endTime": "4:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0203"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0204",
+    "instructor": "Pedram Sadeghian",
+    "total_seats": 28,
+    "open_seats": 24,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "4:00pm",
+        "endTime": "4:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0204"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0301",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 25,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0301"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0302",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 28,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0302"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0303",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 24,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0303"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0304",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0304"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0305",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0305"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0401",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 21,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0401"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0402",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0402"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0403",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "3:00pm",
+        "endTime": "3:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0403"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0404",
+    "instructor": "Nora Burkhauser",
+    "total_seats": 28,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "3:00pm",
+        "endTime": "3:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0404"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0501",
+    "instructor": "Elias Gonzalez",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:30pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0501"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0502",
+    "instructor": "Elias Gonzalez",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:30pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0502"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0503",
+    "instructor": "Elias Gonzalez",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:30pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0503"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0504",
+    "instructor": "Elias Gonzalez",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:30pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC132-0504"
+  },
+  {
+    "course_name": "CMSC132",
+    "section_id": "0505",
+    "instructor": "Elias Gonzalez",
+    "total_seats": 28,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:30pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC132-0505"
+  }
+]

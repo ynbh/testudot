@@ -1,0 +1,1694 @@
+[
+  {
+    "course_name": "ENGL101",
+    "section_id": "0001",
+    "instructor": "Kerishma Panigrahi",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "8:00am",
+        "endTime": "8:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0001"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0002",
+    "instructor": "Porter Olsen",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "8:00am",
+        "endTime": "8:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0002"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0101",
+    "instructor": "John Tobin",
+    "total_seats": 17,
+    "open_seats": 9,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0101"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0102",
+    "instructor": "Porter Olsen",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0102"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0103",
+    "instructor": "Olubukola Salako",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0103"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0104",
+    "instructor": "Anthony Batts",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0104"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0105",
+    "instructor": "John Macintosh",
+    "total_seats": 17,
+    "open_seats": 9,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0105"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0106",
+    "instructor": "Dylan Carpenter",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0106"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0203",
+    "instructor": "Gerard Holmes",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0203"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0204",
+    "instructor": "John Macintosh",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0204"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0205",
+    "instructor": "Ava Serra",
+    "total_seats": 17,
+    "open_seats": 10,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0205"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0206",
+    "instructor": "Nahid Ahmadian",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0206"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0207",
+    "instructor": "John Tobin",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0207"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0301",
+    "instructor": "Olubukola Salako",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0301"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0302",
+    "instructor": "Stephanie Allen",
+    "total_seats": 17,
+    "open_seats": 14,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0302"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0304",
+    "instructor": "Nahid Ahmadian",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0304"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0306",
+    "instructor": "Porter Olsen",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0306"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0308",
+    "instructor": "Sydney Sharpstene",
+    "total_seats": 17,
+    "open_seats": 10,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0308"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0309",
+    "instructor": "Catherine Byrne",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL101-0309"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0401",
+    "instructor": "Corinne Brinkley",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0401"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0402",
+    "instructor": "John Tobin",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0402"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0403",
+    "instructor": "Stephanie Allen",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0403"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0404",
+    "instructor": "Sydney Sharpstene",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0404"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0405",
+    "instructor": "Janet Shim",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0405"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0407",
+    "instructor": "Nahid Ahmadian",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0407"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0408",
+    "instructor": "Dylan Carpenter",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0408"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0501",
+    "instructor": "Preet Bhela",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0501"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0502",
+    "instructor": "Anthony Batts",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0502"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0503",
+    "instructor": "James Rankin",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0503"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0504",
+    "instructor": "Catherine Byrne",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0504"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0506",
+    "instructor": "John Macintosh",
+    "total_seats": 17,
+    "open_seats": 10,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0506"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0507",
+    "instructor": "Olubukola Salako",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0507"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0601",
+    "instructor": "Preet Bhela",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0601"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0602",
+    "instructor": "Dylan Carpenter",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0602"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0603",
+    "instructor": "Anthony Batts",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0603"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0604",
+    "instructor": "Sydney Sharpstene",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0604"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0605",
+    "instructor": "Olubukola Salako",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0605"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0606",
+    "instructor": "Janet Shim",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MWF",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0606"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0701",
+    "instructor": "Catherine Byrne",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0701"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "0702",
+    "instructor": "Paul Cote",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "6:30pm",
+        "endTime": "7:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-0702"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1001",
+    "instructor": "Eric Baker",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "8:00am",
+        "endTime": "9:15am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1001"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1002",
+    "instructor": "Susan Pramschufer",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "8:00am",
+        "endTime": "9:15am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1002"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1101",
+    "instructor": "William Pittman",
+    "total_seats": 17,
+    "open_seats": 6,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1101"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1102",
+    "instructor": "Xiaofang Huang",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1102"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1103",
+    "instructor": "Sabrina Islam",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1103"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1106",
+    "instructor": "Victoria Moten",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1106"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1108",
+    "instructor": "Ariana Nash",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1108"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1109",
+    "instructor": "Gregory Deinert",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-1109"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1202",
+    "instructor": "Xiaofang Huang",
+    "total_seats": 17,
+    "open_seats": 14,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1202"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1203",
+    "instructor": "Joshua Weiss",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1203"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1204",
+    "instructor": "Sabrina Islam",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1204"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1205",
+    "instructor": "Robert Lucci",
+    "total_seats": 17,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1205"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1206",
+    "instructor": "William Pittman",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1206"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1207",
+    "instructor": "Anne Bolgiano",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1207"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1208",
+    "instructor": "Daniel Sidman",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1208"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1301",
+    "instructor": "Rachel Cote",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1301"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1302",
+    "instructor": "Gregory Deinert",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1302"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1303",
+    "instructor": "Liam Daley",
+    "total_seats": 17,
+    "open_seats": 5,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1303"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1304",
+    "instructor": "Peter Grybauskas",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1304"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1305",
+    "instructor": "Ariana Nash",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1305"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1306",
+    "instructor": "Sabrina Islam",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1306"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1401",
+    "instructor": "Oghenetega Oghenechovwen",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1401"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1402",
+    "instructor": "Anne Bolgiano",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1402"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1403",
+    "instructor": "Xiaofang Huang",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1403"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1404",
+    "instructor": "Ariana Nash",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1404"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1405",
+    "instructor": "Gregory Deinert",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1405"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1406",
+    "instructor": "Liam Daley",
+    "total_seats": 17,
+    "open_seats": 9,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1406"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1601",
+    "instructor": "Chauncey Dennie",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1601"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "1701",
+    "instructor": "Chauncey Dennie",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "6:30pm",
+        "endTime": "7:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-1701"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9001",
+    "instructor": "Mike Kolakoski",
+    "total_seats": 17,
+    "open_seats": 10,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "Th",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-9001"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9002",
+    "instructor": "Katherine Joshi",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9002"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9003",
+    "instructor": "Radford Skudrna",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "Tu",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-9003"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9004",
+    "instructor": "Radford Skudrna",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9004"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9005",
+    "instructor": "Yvonne Roe",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MF",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9005"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9006",
+    "instructor": "Yvonne Roe",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MF",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9006"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9007",
+    "instructor": "Katherine Joshi",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "Th",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-9007"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9008",
+    "instructor": "Nia Crawford",
+    "total_seats": 17,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9008"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9009",
+    "instructor": "Nia Crawford",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9009"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9010",
+    "instructor": "Katherine Joshi",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9010"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9011",
+    "instructor": "David Brookshire",
+    "total_seats": 17,
+    "open_seats": 6,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9011"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9012",
+    "instructor": "David Brookshire",
+    "total_seats": 17,
+    "open_seats": 5,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9012"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9013",
+    "instructor": "David Brookshire",
+    "total_seats": 17,
+    "open_seats": 2,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9013"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9014",
+    "instructor": "David Brookshire",
+    "total_seats": 17,
+    "open_seats": 6,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9014"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9015",
+    "instructor": "Rachel Waugh",
+    "total_seats": 17,
+    "open_seats": 6,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "Tu",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      }
+    ],
+    "custom_course_id": "ENGL101-9015"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9016",
+    "instructor": "Rachel Waugh",
+    "total_seats": 17,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9016"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9017",
+    "instructor": "Radford Skudrna",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9017"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9018",
+    "instructor": "Sonney Wolfe",
+    "total_seats": 17,
+    "open_seats": 11,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9018"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9019",
+    "instructor": "Catherine Bayly",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MF",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9019"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9020",
+    "instructor": "Catherine Bayly",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MF",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "custom_course_id": "ENGL101-9020"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9021",
+    "instructor": "Mike Kolakoski",
+    "total_seats": 17,
+    "open_seats": 7,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9021"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9022",
+    "instructor": "Susan Pramschufer",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9022"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9024",
+    "instructor": "Nia Crawford",
+    "total_seats": 17,
+    "open_seats": 13,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9024"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9025",
+    "instructor": "Sonney Wolfe",
+    "total_seats": 17,
+    "open_seats": 12,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "5:00pm",
+        "endTime": "6:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9025"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9026",
+    "instructor": "Mike Kolakoski",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9026"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9027",
+    "instructor": "Eliamani Ismail",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9027"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9028",
+    "instructor": "Mike Kolakoski",
+    "total_seats": 17,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9028"
+  },
+  {
+    "course_name": "ENGL101",
+    "section_id": "9029",
+    "instructor": "Eliamani Ismail",
+    "total_seats": 17,
+    "open_seats": 16,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Th",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "Tu",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      }
+    ],
+    "custom_course_id": "ENGL101-9029"
+  }
+]

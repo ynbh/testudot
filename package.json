@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.2",
+    "inquirer": "^12.1.0",
+    "node-cron": "^3.0.3",
+    "node-html-parser": "^6.1.13",
+    "nodemailer": "^6.9.16",
+    "puppeteer": "^23.9.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

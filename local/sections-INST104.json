@@ -1,0 +1,52 @@
+[
+  {
+    "course_name": "INST104",
+    "section_id": "0101",
+    "instructor": "Anat Szendro Sevilla",
+    "total_seats": 99,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "Tu",
+        "startTime": "2:00pm",
+        "endTime": "4:45pm"
+      }
+    ]
+  },
+  {
+    "course_name": "INST104",
+    "section_id": "0201",
+    "instructor": "Marilyn Iriarte Santacruz",
+    "total_seats": 60,
+    "open_seats": 3,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "3:00pm",
+        "endTime": "4:15pm"
+      }
+    ]
+  },
+  {
+    "course_name": "INST104",
+    "section_id": "0301",
+    "instructor": "Francesca Polito",
+    "total_seats": 72,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "M",
+        "startTime": "2:00pm",
+        "endTime": "4:45pm"
+      },
+      {
+        "days": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ]
+  }
+]

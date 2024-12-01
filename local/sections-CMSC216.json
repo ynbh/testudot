@@ -1,0 +1,359 @@
+[
+  {
+    "course_name": "CMSC216",
+    "section_id": "0101",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 23,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "MW",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0101"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0102",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 23,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0102"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0103",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 23,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0103"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0104",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0104"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0105",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "9:30am",
+        "endTime": "10:45am"
+      },
+      {
+        "days": "MW",
+        "startTime": "2:00pm",
+        "endTime": "2:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC216-0105"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0202",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0202"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0205",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0205"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0206",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0206"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0207",
+    "instructor": "Christopher Kauffman",
+    "total_seats": 30,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "11:00am",
+        "endTime": "12:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC216-0207"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0301",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 27,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0301"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0302",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 21,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0302"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0303",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 17,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0303"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0304",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 26,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "12:30pm",
+        "endTime": "1:45pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0304"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0401",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 26,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "9:00am",
+        "endTime": "9:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0401"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0403",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 20,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0403"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0404",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 14,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "CMSC216-0404"
+  },
+  {
+    "course_name": "CMSC216",
+    "section_id": "0405",
+    "instructor": "Larry Herman",
+    "total_seats": 30,
+    "open_seats": 15,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "TuTh",
+        "startTime": "2:00pm",
+        "endTime": "3:15pm"
+      },
+      {
+        "days": "MW",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "CMSC216-0405"
+  }
+]

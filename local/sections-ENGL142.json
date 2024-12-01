@@ -1,0 +1,86 @@
+[
+  {
+    "course_name": "ENGL142",
+    "section_id": "0101",
+    "instructor": "Blake Wilder",
+    "total_seats": 14,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "F",
+        "startTime": "10:00am",
+        "endTime": "10:50am"
+      }
+    ],
+    "custom_course_id": "ENGL142-0101"
+  },
+  {
+    "course_name": "ENGL142",
+    "section_id": "0102",
+    "instructor": "Blake Wilder",
+    "total_seats": 14,
+    "open_seats": 1,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "F",
+        "startTime": "12:00pm",
+        "endTime": "12:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL142-0102"
+  },
+  {
+    "course_name": "ENGL142",
+    "section_id": "0103",
+    "instructor": "Blake Wilder",
+    "total_seats": 14,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "F",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      }
+    ],
+    "custom_course_id": "ENGL142-0103"
+  },
+  {
+    "course_name": "ENGL142",
+    "section_id": "0104",
+    "instructor": "Blake Wilder",
+    "total_seats": 14,
+    "open_seats": 0,
+    "waitlist_count": 0,
+    "class_times": [
+      {
+        "days": "MW",
+        "startTime": "1:00pm",
+        "endTime": "1:50pm"
+      },
+      {
+        "days": "F",
+        "startTime": "11:00am",
+        "endTime": "11:50am"
+      }
+    ],
+    "custom_course_id": "ENGL142-0104"
+  }
+]
