@@ -13,11 +13,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-
-// const supabaseUrl = process.env.SUPABASE_URL as string;
-// const supabaseKey = process.env.SUPABASE_SERVICE_ROLE as string
-// const supabase = createClient(supabaseUrl, supabaseKey);
-
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
@@ -51,7 +46,7 @@ const openDatabase = async () => {
   });
 };
 
-// Initialize database with necessary tables
+// initialize database with necessary tables
 const initializeDatabase = async () => {
   const db = await openDatabase();
   
@@ -73,6 +68,8 @@ const initializeDatabase = async () => {
   return db;
 };
 
+
+// do not edit! you can get this information by inspecting the network requests testudo makes and copying the fetch call it makes to soc/search
 const getTestudoCourseHTML = async(courseName: string) => {
   const req = await fetch(`https://app.testudo.umd.edu/soc/search?courseId=${courseName}&sectionId=&termId=202501&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on`, {
     "headers": {
@@ -213,11 +210,10 @@ async function monitorCourse(db: Database, courseName: string) {
 }
 
 // compares data for changes
-
-
 function compareData(existingData, newData: CourseSection[]) {
+
   if (!existingData || existingData.length === 0) {
-    // If no existing data, treat all new sections as new
+    // if no existing data, treat all new sections as new
     return newData.map(section => ({
       type: "new_section",
       data: section
@@ -266,7 +262,7 @@ function compareData(existingData, newData: CourseSection[]) {
 async function sendNotification(changes, courseName: string) {
   console.log("sending notification for", courseName);
 
-  // Start the HTML email body with improved styling
+ 
   let emailBody = `
       <html>
       <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; line-height: 1.6;">
@@ -377,9 +373,8 @@ async function sendNotification(changes, courseName: string) {
 
 
 
-  // Utility function to format time
+  // utility function to format time
   function formatTime(time: string): string {
-    // Assumes time is in 24-hour format like '14:30'
     const [hours, minutes] = time.split(":");
     const hour = parseInt(hours);
     const period = hour >= 12 ? "PM" : "AM";
@@ -387,7 +382,7 @@ async function sendNotification(changes, courseName: string) {
     return `${formattedHour}:${minutes} ${period}`;
   }
 
-  // Send the email with HTML content
+  // send the email with HTML content
   await transporter.sendMail({
     from: "monkey.fwiw@gmail.com",
     to: "y8bhat@gmail.com",
@@ -410,28 +405,34 @@ async function getCoursesFromUser() {
   return answers.courses;
 }
 
-// Function to monitor all courses
-const monitorAllCourses = async (courseNames: string[]) => {
+const monitorAllCourses = async (db: Database, courseNames: string[]) => {
   console.log("starting immediate monitoring...");
-  await Promise.all(courseNames.map(async (name) => await monitorCourse(name)));
+  await Promise.all(courseNames.map(async (name) => await monitorCourse(db, name)));
   console.log("immediate monitoring complete. scheduling next runs...");
 };
 
 const main = async () => {
-  // Initialize database
+  // initialize the database
   const db = await initializeDatabase();
 
-  const courseNames = await getCoursesFromUser(); 
-  
-  // Monitor immediately
-  await monitorAllCourses(courseNames);
+  // get course names from user input
+  const courseNames = await getCoursesFromUser();
 
-  // Set up cron job to monitor every hour
+  // perform immediate monitoring for all courses
+  await monitorAllCourses(db, courseNames);
+
+  console.log("done w/ immediate monitoring. starting cron");
+
+  // set up a cron job to monitor every 30 minutes (adjust interval as needed)
   cron.schedule("*/30 * * * *", async () => {
     console.log("cron job triggered...");
-    await Promise.all(courseNames.map(async (name) => await monitorCourse(db ,name)));
+    // monitor each course periodically
+    await Promise.all(
+      courseNames.map(async (name) => await monitorCourse(db, name))
+    );
   });
 };
+
 
 main().catch(console.error);
 
