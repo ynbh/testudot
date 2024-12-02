@@ -32,6 +32,8 @@ the script will:
 - create a default `.env` file
 - guide you through final configuration
 
+**note**: for nodemailer to work wth gmail, you will first have to turn 2FA on for your gmail account, and then create an  **_app password_** that you will use as your `EMAIL_PASS` environment variable. your `ÈMAIL_USER` remains the same as your gmail username.
+
 ## usage
 
 when you run the application, you'll be prompted to enter course names separated by commas. the app will:
