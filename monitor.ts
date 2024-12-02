@@ -384,8 +384,8 @@ async function sendNotification(changes, courseName: string) {
 
   // send the email with HTML content
   await transporter.sendMail({
-    from: "monkey.fwiw@gmail.com",
-    to: "y8bhat@gmail.com",
+    from: process.env.EMAIL_PASS,
+    to: "someone@gmail.com",
     subject: `🔔 Changes Detected in ${courseName} Sections!`,
     html: emailBody,
   });
