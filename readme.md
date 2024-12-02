@@ -36,10 +36,10 @@ the script will:
 
 ## usage
 
-when you run the application, you'll be prompted to enter course names separated by commas. the app will:
+when you run the application, you'll be prompted to enter course namesgit separated by commas. the app will:
 
 - immediately start monitoring
-- fetch course information from the public api
+- scrape course information from the testudo's schedule of classes page
 - store course data in sqlite database
 - send email notifications on changes
 - repeat monitoring every 30 minutes
