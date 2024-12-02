@@ -17,7 +17,8 @@
         "startTime": "9:00am",
         "endTime": "9:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0101"
   },
   {
     "course_name": "CMSC330",
@@ -37,7 +38,8 @@
         "startTime": "10:00am",
         "endTime": "10:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0102"
   },
   {
     "course_name": "CMSC330",
@@ -57,7 +59,8 @@
         "startTime": "9:00am",
         "endTime": "9:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0103"
   },
   {
     "course_name": "CMSC330",
@@ -77,7 +80,8 @@
         "startTime": "11:00am",
         "endTime": "11:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0104"
   },
   {
     "course_name": "CMSC330",
@@ -97,7 +101,8 @@
         "startTime": "11:00am",
         "endTime": "11:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0105"
   },
   {
     "course_name": "CMSC330",
@@ -117,7 +122,8 @@
         "startTime": "12:00pm",
         "endTime": "12:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0106"
   },
   {
     "course_name": "CMSC330",
@@ -137,7 +143,8 @@
         "startTime": "9:00am",
         "endTime": "9:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0201"
   },
   {
     "course_name": "CMSC330",
@@ -157,7 +164,8 @@
         "startTime": "10:00am",
         "endTime": "10:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0202"
   },
   {
     "course_name": "CMSC330",
@@ -177,7 +185,8 @@
         "startTime": "12:00pm",
         "endTime": "12:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0203"
   },
   {
     "course_name": "CMSC330",
@@ -197,7 +206,8 @@
         "startTime": "12:00pm",
         "endTime": "12:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0204"
   },
   {
     "course_name": "CMSC330",
@@ -217,7 +227,8 @@
         "startTime": "1:00pm",
         "endTime": "1:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0205"
   },
   {
     "course_name": "CMSC330",
@@ -237,7 +248,8 @@
         "startTime": "2:00pm",
         "endTime": "2:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0206"
   },
   {
     "course_name": "CMSC330",
@@ -257,14 +269,15 @@
         "startTime": "2:00pm",
         "endTime": "2:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0207"
   },
   {
     "course_name": "CMSC330",
     "section_id": "0301",
     "instructor": "Clifford Bakalian",
     "total_seats": 35,
-    "open_seats": 2,
+    "open_seats": 1,
     "waitlist_count": 0,
     "class_times": [
       {
@@ -277,7 +290,8 @@
         "startTime": "10:00am",
         "endTime": "10:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0301"
   },
   {
     "course_name": "CMSC330",
@@ -297,7 +311,8 @@
         "startTime": "11:00am",
         "endTime": "11:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0302"
   },
   {
     "course_name": "CMSC330",
@@ -317,7 +332,8 @@
         "startTime": "11:00am",
         "endTime": "11:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0303"
   },
   {
     "course_name": "CMSC330",
@@ -337,7 +353,8 @@
         "startTime": "12:00pm",
         "endTime": "12:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0304"
   },
   {
     "course_name": "CMSC330",
@@ -357,14 +374,15 @@
         "startTime": "9:00am",
         "endTime": "9:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0401"
   },
   {
     "course_name": "CMSC330",
     "section_id": "0402",
     "instructor": "Clifford Bakalian",
     "total_seats": 36,
-    "open_seats": 0,
+    "open_seats": 1,
     "waitlist_count": 0,
     "class_times": [
       {
@@ -377,7 +395,8 @@
         "startTime": "10:00am",
         "endTime": "10:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0402"
   },
   {
     "course_name": "CMSC330",
@@ -397,14 +416,15 @@
         "startTime": "11:00am",
         "endTime": "11:50am"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0403"
   },
   {
     "course_name": "CMSC330",
     "section_id": "0404",
     "instructor": "Clifford Bakalian",
     "total_seats": 36,
-    "open_seats": 0,
+    "open_seats": 1,
     "waitlist_count": 0,
     "class_times": [
       {
@@ -417,7 +437,8 @@
         "startTime": "12:00pm",
         "endTime": "12:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0404"
   },
   {
     "course_name": "CMSC330",
@@ -437,14 +458,15 @@
         "startTime": "1:00pm",
         "endTime": "1:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0405"
   },
   {
     "course_name": "CMSC330",
     "section_id": "0406",
     "instructor": "Clifford Bakalian",
     "total_seats": 36,
-    "open_seats": 2,
+    "open_seats": 0,
     "waitlist_count": 0,
     "class_times": [
       {
@@ -457,7 +479,8 @@
         "startTime": "2:00pm",
         "endTime": "2:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0406"
   },
   {
     "course_name": "CMSC330",
@@ -477,7 +500,8 @@
         "startTime": "3:00pm",
         "endTime": "3:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0407"
   },
   {
     "course_name": "CMSC330",
@@ -497,6 +521,7 @@
         "startTime": "1:00pm",
         "endTime": "1:50pm"
       }
-    ]
+    ],
+    "custom_course_id": "CMSC330-0408"
   }
 ]

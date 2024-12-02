@@ -4,12 +4,19 @@ import fs from "fs";
 import nodemailer from "nodemailer";
 import cron from "node-cron";
 import { createClient } from "@supabase/supabase-js";
+import sqlite3 from "sqlite3";
+import { open, Database } from "sqlite";
 
 import inquirer from "inquirer"; // For CLI input
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE
-const supabase = createClient(supabaseUrl, supabaseKey);
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+
+// const supabaseUrl = process.env.SUPABASE_URL as string;
+// const supabaseKey = process.env.SUPABASE_SERVICE_ROLE as string
+// const supabase = createClient(supabaseUrl, supabaseKey);
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -37,31 +44,73 @@ interface CourseSection {
   custom_course_id: `${string}-${string}`;
 }
 
-const launchCoursePage = async (browser: Browser, courseName: string) => {
-  console.log(`Launching browser for course: ${courseName}`); // log
-
-  const page = await browser.newPage();
-
-  await page.goto(
-    `https://app.testudo.umd.edu/soc/search?courseId=${courseName}&sectionId=&termId=202501&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on`
-  );
-
-  return page;
+const openDatabase = async () => {
+  return await open({
+    filename: './course_monitor.db',
+    driver: sqlite3.Database
+  });
 };
+
+// Initialize database with necessary tables
+const initializeDatabase = async () => {
+  const db = await openDatabase();
+  
+  await db.exec(`
+    CREATE TABLE IF NOT EXISTS courses (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      course_name TEXT,
+      section_id TEXT,
+      instructor TEXT,
+      total_seats INTEGER,
+      open_seats INTEGER,
+      waitlist_count INTEGER,
+      class_times TEXT,
+      last_updated DATETIME DEFAULT CURRENT_TIMESTAMP,
+      custom_course_id TEXT UNIQUE
+    )
+  `);
+
+  return db;
+};
+
+const getTestudoCourseHTML = async(courseName: string) => {
+  const req = await fetch(`https://app.testudo.umd.edu/soc/search?courseId=${courseName}&sectionId=&termId=202501&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on`, {
+    "headers": {
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "max-age=0",
+      "priority": "u=0, i",
+      "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "sec-fetch-site": "same-origin",
+      "sec-fetch-user": "?1",
+      "upgrade-insecure-requests": "1",
+      "cookie": "JSESSIONID=E1BF62D35A5C0BA8583315BA0799713D; _ga_26KY7YZR70=GS1.1.1699823535.2.0.1699823535.0.0.0; _ga=GA1.3.239578705.1699654926; nmstat=84e4bba9-0213-fc21-27a4-7e25f5ed8bb6; _ga_9W00B8Y6D6=GS1.1.1702360504.2.0.1702360504.0.0.0; _ga_FWRTZ8V96T=GS1.1.1702416504.2.0.1702416504.60.0.0; _hjSessionUser_2558111=eyJpZCI6IjE5MzhkMWU1LTQwYTQtNWY4My04NTQ4LWVjYWZlNmFmMzJmZCIsImNyZWF0ZWQiOjE3MDIzNDQ2MzEyMjYsImV4aXN0aW5nIjp0cnVlfQ==; _ga_0ME57WCM7H=GS1.1.1702514387.3.0.1702514395.52.0.0; _ga_6RJ22ZEGTP=GS1.1.1702516135.1.1.1702516144.0.0.0; _ga_0HWJZKFYZR=GS1.1.1702579495.8.0.1702579497.0.0.0; _ga=GA1.2.239578705.1699654926; _ga_E3TLPTPH8G=GS1.2.1702598269.3.1.1702598272.0.0.0; _ga_E9M33B2469=GS1.1.1702608386.4.0.1702608386.0.0.0; visid_incap_2811896=0MSvot8VTdWilqwsBOmmV8aSvmUAAAAAQUIPAAAAAAD6MEodHVc7Sd91v8LOdsRn; dtCookie=v_4_srv_16_sn_A1900212548BC69878EE4B229CB38983_perc_100000_ol_0_mul_1_app-3Af9eed1d550ab4737_1_app-3A5718141a4da56b27_1; my-saved-list=%7B%22202501-CMSC351-0301%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22CMSC351%22%2C%22sectionId%22%3A%220301%22%7D%2C%22202501-STAT400-0122%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22STAT400%22%2C%22sectionId%22%3A%220122%22%7D%2C%22202501-INST104-0101%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22INST104%22%2C%22sectionId%22%3A%220101%22%7D%2C%22202501-CMSC320-0101%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22CMSC320%22%2C%22sectionId%22%3A%220101%22%7D%2C%22202501-CMSC398L-0101%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22CMSC398L%22%2C%22sectionId%22%3A%220101%22%7D%2C%22202501-CMSC330-0103%22%3A%7B%22termId%22%3A%22202501%22%2C%22courseId%22%3A%22CMSC330%22%2C%22sectionId%22%3A%220103%22%7D%7D; monkey=6757c2c3-9fb2-4dcd-9d35-4acc714b30f1; JSESSIONID=CB0F63B467E7E39A70E881712726221B; AWSALB=bMtonbBrev+b9V2SMugUKNjE9jj9P4jxQdDuMVIlRpO1nGhvTZuGtW/m/tcgjCc386QbM/A7rfegvzIChW/0VrJMcH6y4Siibfu3WXOCBel31Wzd6jSEyoJq/+eO; AWSALBCORS=bMtonbBrev+b9V2SMugUKNjE9jj9P4jxQdDuMVIlRpO1nGhvTZuGtW/m/tcgjCc386QbM/A7rfegvzIChW/0VrJMcH6y4Siibfu3WXOCBel31Wzd6jSEyoJq/+eO",
+      "Referer": "https://app.testudo.umd.edu/soc/",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "body": null,
+    "method": "GET"
+  });
+  const data = await req.text();
+  return data;
+}
+
+const parseTestudoCourseHTML = async (html: string) => {
+  const parsed = parse(html);
+  return parsed;
+}
+
 
 // scrapes course data
 const scrapeCourseData = async (courseName: string) => {
-  console.log("starting to scrape data for", courseName);
-  const browser = await puppeteer.launch({ headless: true });
+  console.log("starting to get data for", courseName);
+  const html = await getTestudoCourseHTML(courseName)
 
-  const page = await launchCoursePage(browser, courseName);
-
-  const selector = ".sections-container";
-  await page.waitForSelector(selector);
-  console.log("found sections container for", courseName);
-
-  const divContent = await page.$eval(selector, (element) => element.outerHTML);
-  const classes = parse(divContent);
+  const classes = await parseTestudoCourseHTML(html);
 
   const sections = classes.querySelectorAll(".section").map((section) => {
     const section_id =
@@ -104,13 +153,12 @@ const scrapeCourseData = async (courseName: string) => {
   fs.writeFileSync(fileName, JSON.stringify(sections, null, 2));
   console.log("data saved to", fileName);
 
-  await browser.close();
-
   return sections;
 };
 
+
 // monitors course
-async function monitorCourse(courseName: string) {
+async function monitorCourse(db: Database, courseName: string) {
   try {
     console.log("monitoring course:", courseName);
 
@@ -118,15 +166,10 @@ async function monitorCourse(courseName: string) {
     const scrapedData = await scrapeCourseData(courseName);
 
     // fetch existing data
-    const { data: existingData, error: fetchError } = await supabase
-      .from("courses")
-      .select("*")
-      .eq("course_name", courseName);
-
-    if (fetchError) {
-      console.error("fetch error:", fetchError);
-      return;
-    }
+    const existingData = await db.all(
+      'SELECT * FROM courses WHERE course_name = ?',
+      [courseName]
+    );
 
     // compare data for changes
     const changes = compareData(existingData, scrapedData);
@@ -140,23 +183,29 @@ async function monitorCourse(courseName: string) {
     }
 
     // update the database with new data
-    const p = await Promise.all(
-      scrapedData.map(async (section) => {
-        const { error } = await supabase.from("courses").upsert({
-          course_name: courseName,
-          created_at: section.created_at,
-          section_id: section.section_id,
-          instructor: section.instructor,
-          total_seats: section.total_seats,
-          open_seats: section.open_seats,
-          waitlist_count: section.waitlist_count,
-          class_times: JSON.stringify(section.class_times),
-          last_updated: new Date().toISOString(),
-          custom_course_id: `${courseName}-${section.section_id}`,
-        });
-        console.log("ERROR: ", error);
-      })
-    );
+    const stmt = await db.prepare(`
+      INSERT OR REPLACE INTO courses (
+        course_name, section_id, instructor, total_seats, 
+        open_seats, waitlist_count, class_times, 
+        last_updated, custom_course_id
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?)
+    `);
+
+    for (const section of scrapedData) {
+      stmt.run(
+        section.course_name,
+        section.section_id,
+        section.instructor,
+        section.total_seats,
+        section.open_seats,
+        section.waitlist_count,
+        JSON.stringify(section.class_times),
+        section.custom_course_id
+      );
+    }
+
+    stmt.finalize();
+
     console.log("database updated for", courseName);
   } catch (error) {
     console.error("monitoring error:", error);
@@ -164,7 +213,17 @@ async function monitorCourse(courseName: string) {
 }
 
 // compares data for changes
+
+
 function compareData(existingData, newData: CourseSection[]) {
+  if (!existingData || existingData.length === 0) {
+    // If no existing data, treat all new sections as new
+    return newData.map(section => ({
+      type: "new_section",
+      data: section
+    }));
+  }
+
   let changes: any[] = [];
 
   for (const newSection of newData) {
@@ -358,16 +417,21 @@ const monitorAllCourses = async (courseNames: string[]) => {
   console.log("immediate monitoring complete. scheduling next runs...");
 };
 
-// Main function to run monitoring and set up cron
 const main = async () => {
-  const courseNames = await getCoursesFromUser(); // Get course names from user
-  monitorAllCourses(courseNames); // Monitor immediately
+  // Initialize database
+  const db = await initializeDatabase();
 
-  // Set up cron job to monitor every 30 minutes
+  const courseNames = await getCoursesFromUser(); 
+  
+  // Monitor immediately
+  await monitorAllCourses(courseNames);
+
+  // Set up cron job to monitor every hour
   cron.schedule("*/30 * * * *", async () => {
     console.log("cron job triggered...");
-    await monitorAllCourses(courseNames);
+    await Promise.all(courseNames.map(async (name) => await monitorCourse(db ,name)));
   });
 };
 
-main();
+main().catch(console.error);
+
