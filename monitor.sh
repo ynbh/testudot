@@ -17,6 +17,7 @@ npm install
 cat << EOF > .env
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_email_password
+TO_USER=reciever@gmail.com
 EOF
 
 

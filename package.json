@@ -9,12 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.7.0",
     "@supabase/supabase-js": "^2.46.2",
     "dotenv": "^16.4.5",
     "inquirer": "^12.1.0",
     "node-cron": "^3.0.3",
     "node-html-parser": "^6.1.13",
     "nodemailer": "^6.9.16",
+    "prisma": "^6.7.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   },

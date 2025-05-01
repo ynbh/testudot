@@ -3,7 +3,7 @@
 
 ## overview
 
-this is a nodejs-based course monitoring application that fetches course section information from the university of maryland's public course info api, tracks changes, and sends email notifications when updates occur.
+this is a nodejs-based course monitoring application that fetches course section information from the university of maryland's public course info page, tracks changes, and sends email notifications when updates occur.
 
 ## features
 
