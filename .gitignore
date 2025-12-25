@@ -2,3 +2,10 @@
 node_modules/
 course_monitor.db
 local/
+state/
+.testudot
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+.python-version

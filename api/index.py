@@ -1,0 +1,35 @@
+import os
+
+os.environ["IS_SERVER"] = "true"
+
+from fastapi import FastAPI
+from typing import List, Dict
+from src.utils import get_mappings
+from src.monitor import monitor_all_courses
+
+app = FastAPI(title="testudot API", description="UMD Course Monitoring API (Read-Only)")
+
+
+@app.get("/api/mappings", response_model=Dict[str, List[str]])
+async def list_mappings_api():
+    """List all bundled user-course mappings."""
+    return get_mappings()
+
+
+@app.post("/api/monitor")
+async def trigger_monitor():
+    """Trigger a single monitoring cycle for all courses."""
+    from src.scraper import get_current_term_id
+
+    term_id = get_current_term_id()
+    await monitor_all_courses(term_id=term_id)
+    return {
+        "status": "success",
+        "message": f"Monitoring cycle completed for term {term_id}",
+    }
+
+
+@app.get("/api/health")
+async def health_check():
+    """Health check endpoint."""
+    return {"status": "ok"}
