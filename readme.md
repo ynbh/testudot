@@ -30,14 +30,24 @@ uv sync
 
 create a `.env` file with the following:
 
-- `EMAIL_USER`: your gmail address.
-- `EMAIL_PASS`: your gmail **app password**.
+- `EMAIL_USER`: your gmail address (for local SMTP fallback).
+- `EMAIL_PASS`: your gmail **app password** (for local SMTP fallback).
+- `RESEND_TOKEN`: your **resend.com** api key (required for production).
+- `EMAIL_FROM`: the verified sender email for resend (defaults to `onboarding@resend.dev`).
 - `REDIS_URL`: your upstash redis rest url.
 - `REDIS_TOKEN`: your upstash redis rest token.
 - `PERSISTENCE_MODE`: set to `redis` or `local` (defaults to `local`).
 
-> [!NOTE]
-> for gmail notifications, you must enable 2FA and create an **app password**. the application will not be able to log in with your primary password.
+### setting up resend (for render/production)
+render's free tier **blocks all outbound smtp traffic** (ports 25, 465, 587). to send notifications from render, you must use the [resend](https://resend.com) http api:
+
+1.  **sign up**: create a free account at [resend.com](https://resend.com).
+2.  **get api key**: create an api key and add it as `RESEND_TOKEN` in your render environment variables.
+3.  **set sender**: by default, resend free accounts can only send from `onboarding@resend.dev`. the application uses this as the default `EMAIL_FROM`.
+4.  **recipient rule**: on the Resend free tier, you can **only** send emails to the **same email address** you used to sign up for Resend. ensure the email in your `user-course-map.json` matches your Resend account email.
+
+> [!IMPORTANT]
+> if you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard. Otherwise, run this app locally and use SMTP (simply don't set `RESEND_TOKEN` in your `.env`)
 
 ## usage
 

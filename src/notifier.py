@@ -94,27 +94,18 @@ def generate_email_body(changes: List[dict], course_name: str) -> str:
     </html>"""
 
 
-async def send_notification(changes: List[dict], course_name: str):
-    console.print(f"[green]Sending notification for {course_name}[/green]")
-
-    recipients = get_emails_for_course(course_name)
-    if not recipients:
-        console.print(
-            f"[grey50]No recipients for {course_name}, skipping email.[/grey50]"
-        )
-        return
-
+async def send_smtp_notification(changes: List[dict], course_name: str, recipients: List[str]):
     email_user = os.getenv("EMAIL_USER")
     email_pass = os.getenv("EMAIL_PASS")
 
     if not email_user or not email_pass:
-        console.print(
-            "[yellow]EMAIL_USER or EMAIL_PASS not set. Skipping notification.[/yellow]"
-        )
+        console.print("[yellow]EMAIL_USER or EMAIL_PASS not set. Skipping SMTP.[/yellow]")
         return
 
-    body = generate_email_body(changes, course_name)
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
 
+    body = generate_email_body(changes, course_name)
     msg = MIMEMultipart()
     msg["From"] = email_user
     msg["To"] = ", ".join(recipients)
@@ -126,6 +117,59 @@ async def send_notification(changes: List[dict], course_name: str):
             server.starttls()
             server.login(email_user, email_pass)
             server.send_message(msg)
-        console.print(f"[green]Notification sent for {course_name}[/green]")
+        console.print(f"[green]SMTP Notification sent for {course_name}[/green]")
     except Exception as e:
-        console.print(f"[red]Failed to send notification for {course_name}:[/red] {e}")
+        console.print(f"[red]Failed to send SMTP notification for {course_name}:[/red] {e}")
+
+
+import asyncio
+
+# global lock to respect resend's 2 req/sec rate limit
+_resend_lock = asyncio.Lock()
+
+async def send_resend_notification(changes: List[dict], course_name: str, recipients: List[str], api_key: str):
+    import resend
+    
+    resend.api_key = api_key
+    body = generate_email_body(changes, course_name)
+    
+    # resend requires a verified sender. we use a default if not provided.
+    from_email = os.getenv("EMAIL_FROM", "onboarding@resend.dev")
+    
+    params = {
+        "from": from_email,
+        "to": recipients,
+        "subject": f"Changes detected in {course_name.lower()} sections",
+        "html": body
+    }
+    
+    async with _resend_lock:
+        try:
+            resend.Emails.send(params)
+            console.print(f"[green]Resend Notification sent for {course_name}[/green]")
+        except Exception as e:
+            console.print(f"[red]Failed to send Resend notification for {course_name}:[/red] {e}")
+            raise e
+        finally:
+            # always sleep for 0.5s after a Resend attempt to respect rate limits. we have 2 req/sec limit 
+            await asyncio.sleep(0.5)
+
+async def send_notification(changes: List[dict], course_name: str):
+    console.print(f"[green]Sending notification for {course_name}[/green]")
+
+    recipients = get_emails_for_course(course_name)
+    if not recipients:
+        console.print(
+            f"[grey50]No recipients for {course_name}, skipping email.[/grey50]"
+        )
+        return
+
+    resend_api_key = os.getenv("RESEND_TOKEN")
+    if resend_api_key:
+        try:
+            await send_resend_notification(changes, course_name, recipients, resend_api_key)
+        except Exception:
+            console.print("[yellow]Falling back to SMTP notification.[/yellow]")
+            await send_smtp_notification(changes, course_name, recipients)
+    else:
+        await send_smtp_notification(changes, course_name, recipients)
