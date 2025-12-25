@@ -40,14 +40,4 @@ class Config:
         
         self.persistence_mode = PersistenceMode.REDIS if mode_str == "redis" else PersistenceMode.LOCAL
 
-    def load_from_cf(self, env):
-        """Update settings from Cloudflare Worker env object."""
-        self.email_user = getattr(env, "EMAIL_USER", self.email_user)
-        self.email_pass = getattr(env, "EMAIL_PASS", self.email_pass)
-        self.redis_url = getattr(env, "REDIS_URL", self.redis_url)
-        self.redis_token = getattr(env, "REDIS_TOKEN", self.redis_token)
-        # cloudflare is always considered a server environment
-        self.is_server = True
-        self.persistence_mode = PersistenceMode.REDIS
-
 settings = Config()
