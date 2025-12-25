@@ -48,8 +48,19 @@ render's free tier **blocks all outbound smtp traffic** (ports 25, 465, 587). to
 4.  **recipient rule**: on the Resend free tier, you can **only** send emails to the **same email address** you used to sign up for Resend. ensure the email in your `user-course-map.json` matches your Resend account email.
 
 > [!IMPORTANT]
-> **render free services** block outbound smtp traffic (ports 25, 465, 587). you **must** use the `RESEND_TOKEN` for notifications to work in production on render.
 > if you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard.
+
+### api security
+to prevent unauthorized users from triggering your monitor or viewing your mappings, you can set an `API_KEY` environment variable.
+
+1. **set the key**: add `API_KEY` to your render environment variables with a secret value.
+2. **use the header**: when making requests to `/api/monitor` or `/api/mappings`, include the `X-API-Key` header:
+   ```bash
+   curl -X POST https://your-app.onrender.com/api/monitor \
+     -H "X-API-Key: your-secret-key"
+   ```
+> [!NOTE]
+> the `/api/health` endpoint remains public so you can perform health checks if needed.
 
 ## usage
 
