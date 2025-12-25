@@ -3,7 +3,6 @@ node_modules/
 course_monitor.db
 local/
 state/
-.testudot
 .venv/
 .venv-workers
 __pycache__/
