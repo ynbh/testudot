@@ -3,7 +3,7 @@ services:
   - type: web
     name: testudot-api
     runtime: docker
-    plan: starter
+    plan: free
     region: ohio
     envVars:
       - key: PORT
