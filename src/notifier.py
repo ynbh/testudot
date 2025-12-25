@@ -3,10 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import List, Dict
-from rich.console import Console
-from .utils import get_mappings
-
-console = Console()
+from src.utils import get_mappings, console
 
 
 def get_emails_for_course(course_name: str) -> List[str]:

@@ -4,10 +4,10 @@ import schedule
 import time
 import json
 from typing import Optional
-from .config import settings, PersistenceMode
+from src.config import settings, PersistenceMode
 from rich.console import Console
-from .utils import get_mappings, add_mapping, remove_mapping
-from .monitor import monitor_all_courses
+from src.utils import get_mappings, add_mapping, remove_mapping
+from src.monitor import monitor_all_courses
 
 app = typer.Typer(help="CLI to manage and run UMD Testudo course monitoring")
 console = Console()
@@ -18,27 +18,39 @@ def monitor(
     interval: int = typer.Option(
         15, "--interval", "-i", help="Poll interval in minutes"
     ),
+    term: Optional[str] = typer.Option(None, "--term", "-t", help="Term ID to use"),
+    no_prompt: bool = typer.Option(False, "--no-prompt", help="Skip interactive prompts"),
+    once: bool = typer.Option(False, "--once", help="Run a single cycle and exit"),
 ):
-    """Start continuous monitoring loop"""
-    from .scraper import get_current_term_id
+    """Start course monitoring (continuous by default, or once with --once)"""
+    from src.scraper import get_current_term_id
 
     detected_term = get_current_term_id()
-    term_id = typer.prompt(f"Confirm or change detected Term ID", default=detected_term)
+    term_id = term
+    if not term_id:
+        if no_prompt or once:
+            term_id = detected_term
+        else:
+            term_id = typer.prompt(f"Confirm or change detected Term ID", default=detected_term)
 
     console.print(
-        f"[green]Starting monitor (interval: {interval} min, Term: {term_id})[/green]"
+        f"[green]Starting monitor (Term: {term_id})[/green]"
     )
 
     async def run_cycle():
-        from .monitor import monitor_all_courses
-
-        # for now, we follow the request from the CLI if automatic term detection is wrong
+        from src.monitor import monitor_all_courses
         await monitor_all_courses(term_id=term_id)
-        next_run = schedule.next_run()
-        if next_run:
-            console.print(
-                f"[grey50]Next check at {next_run.strftime('%I:%M:%S %p')}[/grey50]"
-            )
+        
+        if not once:
+            next_run = schedule.next_run()
+            if next_run:
+                console.print(
+                    f"[grey50]Next check at {next_run.strftime('%I:%M:%S %p')}[/grey50]"
+                )
+
+    if once:
+        asyncio.run(run_cycle())
+        return
 
     # schedule first to ensure next_run() has value during initial run
     schedule.every(interval).minutes.do(lambda: asyncio.run(run_cycle()))
@@ -80,7 +92,7 @@ def config(
     mode: str = typer.Option(..., "--mode", "-m", help="Set persistence mode (local or redis)")
 ):
     """Set global configuration in .testudot"""
-    from .config import CONFIG_FILE, PersistenceMode
+    from src.config import CONFIG_FILE, PersistenceMode
     
     mode = mode.lower()
     if mode not in ["local", "redis"]:

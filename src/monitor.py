@@ -1,12 +1,9 @@
 import asyncio
 from typing import List, Any, Optional
-from rich.console import Console
-from .scraper import scrape_course_data
-from .notifier import send_notification
-from .utils import load_sections_state, save_sections_state, get_mappings
-from .models import CourseSection
-
-console = Console()
+from src.scraper import scrape_course_data
+from src.notifier import send_notification
+from src.utils import load_sections_state, save_sections_state, get_mappings, console
+from src.models import CourseSection
 
 
 def compare_data(existing_data: List[dict], new_data: List[dict]) -> List[dict]:

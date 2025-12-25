@@ -20,7 +20,7 @@ class Config:
         self.redis_url = os.getenv("REDIS_URL")
         self.redis_token = os.getenv("REDIS_TOKEN")
         
-        # 1. default for CLI is always local
+        # 1. start with 'local' default
         mode_str = "local"
         
         # 2. check environment variable for override
@@ -28,7 +28,7 @@ class Config:
         if env_mode:
             mode_str = env_mode.lower()
             
-        # 3. override with .testudot file if it exists
+        # 3. override with .testudot file if it exists (higher precedence)
         if CONFIG_FILE.exists():
             try:
                 with open(CONFIG_FILE, "r") as f:
@@ -39,10 +39,15 @@ class Config:
                 pass
         
         self.persistence_mode = PersistenceMode.REDIS if mode_str == "redis" else PersistenceMode.LOCAL
-        
-        # 4. force redis for server environments (overrides everything)
-        self.is_server = os.getenv("VERCEL") is not None or os.getenv("IS_SERVER") == "true"
-        if self.is_server:
-            self.persistence_mode = PersistenceMode.REDIS
+
+    def load_from_cf(self, env):
+        """Update settings from Cloudflare Worker env object."""
+        self.email_user = getattr(env, "EMAIL_USER", self.email_user)
+        self.email_pass = getattr(env, "EMAIL_PASS", self.email_pass)
+        self.redis_url = getattr(env, "REDIS_URL", self.redis_url)
+        self.redis_token = getattr(env, "REDIS_TOKEN", self.redis_token)
+        # cloudflare is always considered a server environment
+        self.is_server = True
+        self.persistence_mode = PersistenceMode.REDIS
 
 settings = Config()

@@ -1,0 +1,43 @@
+services:
+  # FastAPI Web Service
+  - type: web
+    name: testudot-api
+    runtime: docker
+    plan: free # or starter
+    region: ohio
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: IS_SERVER
+        value: "true"
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: REDIS_TOKEN
+        sync: false
+    # Command to run the API
+    startCommand: uv run main.py serve --host 0.0.0.0 --port $PORT
+
+  # Monitoring Cron Job
+  - type: cron
+    name: testudot-monitor
+    runtime: docker
+    plan: free
+    region: ohio
+    schedule: "*/60 * * * *" # Every hour. Ideally, you should run this every 30 minutes but idk how generous render free plan is with cron jobs
+    envVars:
+      - key: IS_SERVER
+        value: "true"
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: REDIS_TOKEN
+        sync: false
+    # Command to run the monitoring cycle once then exit
+    startCommand: uv run main.py monitor --once

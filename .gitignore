@@ -5,7 +5,10 @@ local/
 state/
 .testudot
 .venv/
+.venv-workers
 __pycache__/
 *.pyc
 .ruff_cache/
 .python-version
+.wrangler
+python_modules

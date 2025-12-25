@@ -1,9 +1,11 @@
 import json
 import os
+import re
 from pathlib import Path
 from typing import Dict, List, Optional
+from src.config import settings, PersistenceMode
+
 from rich.console import Console
-from .config import settings, PersistenceMode
 
 console = Console()
 
@@ -26,7 +28,6 @@ def get_redis_client():
     return _redis_client
 
 # mapping functions
-
 def get_mappings() -> Dict[str, List[str]]:
     if not MAPPINGS_FILE.exists():
         return {}

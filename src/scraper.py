@@ -2,10 +2,8 @@ import httpx
 from datetime import datetime
 from bs4 import BeautifulSoup
 from typing import List, Optional
-from rich.console import Console
-from .models import CourseSection, ClassTime
-
-console = Console()
+from src.utils import console
+from src.models import CourseSection, ClassTime
 
 
 def get_current_term_id() -> str:
