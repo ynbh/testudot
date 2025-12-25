@@ -10,6 +10,8 @@ services:
         value: 8000
       - key: IS_SERVER
         value: "true"
+      - key: PYTHONUNBUFFERED
+        value: "1"
       - key: EMAIL_USER
         sync: false
       - key: EMAIL_PASS

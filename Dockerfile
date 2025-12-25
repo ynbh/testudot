@@ -17,6 +17,7 @@ COPY . .
 
 # Expose port and set env vars
 ENV PORT=8000
+ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Default command (overridden by render.yaml)

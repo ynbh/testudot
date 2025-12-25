@@ -122,8 +122,7 @@ async def send_notification(changes: List[dict], course_name: str):
     msg.attach(MIMEText(body, "html"))
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
-            server.starttls()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
             server.login(email_user, email_pass)
             server.send_message(msg)
         console.print(f"[green]Notification sent for {course_name}[/green]")
