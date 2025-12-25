@@ -122,10 +122,10 @@ async def send_notification(changes: List[dict], course_name: str):
     msg.attach(MIMEText(body, "html"))
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
             server.login(email_user, email_pass)
             server.send_message(msg)
         console.print(f"[green]Notification sent for {course_name}[/green]")
     except Exception as e:
-        console.print(f"[red]Failed to send notification:[/red] {e}")
+        console.print(f"[red]Failed to send notification for {course_name}:[/red] {e}")
