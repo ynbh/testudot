@@ -103,10 +103,17 @@ notes:
 this project is designed to be deployed to **render** using the provided [render.yaml](render.yaml) blueprint.
 
 1. **connect repository**: connect your github repository to render.
-2. **blueprint**: render will automatically detect the blueprint and provision a **web service** (api) and a **cron job** (monitor).
-3. **secrets**: set your `EMAIL_USER`, `EMAIL_PASS`, `REDIS_URL`, and `REDIS_TOKEN` in the render dashboard.
+2. **blueprint**: render will automatically detect the blueprint and provision a **web service** (api).
+3. **secrets**: set your `EMAIL_USER`, `EMAIL_PASS`, `REDIS_URL`, `REDIS_TOKEN`, and `API_KEY` in the render dashboard.
 
-the app uses a `Dockerfile` for the build.
+#### automation (github actions)
+
+to trigger the monitor every 30 minutes for free, use the included github action:
+
+1. **github secrets**: in your repo settings, go to `Settings > Secrets and variables > Actions` and add:
+   - `RENDER_URL`: your app's public url (e.g., `https://testudot.onrender.com`).
+   - `API_KEY`: the same secret key you set in render.
+2. **enable**: the action in `.github/workflows/monitor.yml` will now run automatically every 30 minutes.
 
 ## term detection
 

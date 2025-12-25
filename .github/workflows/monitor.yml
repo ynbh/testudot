@@ -1,0 +1,16 @@
+name: monitor
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: trigger monitor
+        run: |
+          curl -X POST "${{ secrets.RENDER_URL }}/api/monitor" \
+            -H "X-API-Key: ${{ secrets.API_KEY }}" \
+            -f
