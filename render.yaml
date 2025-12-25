@@ -3,7 +3,7 @@ services:
   - type: web
     name: testudot-api
     runtime: docker
-    plan: free # or starter
+    plan: starter
     region: ohio
     envVars:
       - key: PORT
@@ -20,24 +20,3 @@ services:
         sync: false
     # Command to run the API
     dockerCommand: uv run main.py serve --host 0.0.0.0 --port $PORT
-
-  # Monitoring Cron Job
-  - type: cron
-    name: testudot-monitor
-    runtime: docker
-    plan: starter
-    region: ohio
-    schedule: "0 * * * *" # Hourly
-    envVars:
-      - key: IS_SERVER
-        value: "true"
-      - key: EMAIL_USER
-        sync: false
-      - key: EMAIL_PASS
-        sync: false
-      - key: REDIS_URL
-        sync: false
-      - key: REDIS_TOKEN
-        sync: false
-    # Command to run the monitoring cycle once then exit
-    dockerCommand: uv run main.py monitor --once
