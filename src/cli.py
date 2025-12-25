@@ -32,7 +32,7 @@ def monitor(
     async def run_cycle():
         from .monitor import monitor_all_courses
 
-        # for now, we follow the request from the CLI if automatic term detection is wrong.
+        # for now, we follow the request from the CLI if automatic term detection is wrong
         await monitor_all_courses(term_id=term_id)
         next_run = schedule.next_run()
         if next_run:
