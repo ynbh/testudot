@@ -33,6 +33,7 @@ create a `.env` file with the following:
 - `EMAIL_USER`: your gmail address (for local SMTP fallback).
 - `EMAIL_PASS`: your gmail **app password** (for local SMTP fallback).
 - `RESEND_TOKEN`: your **resend.com** api key (required for production).
+- `API_KEY`: a secret key of your choice to restrict API access (e.g., `my-super-secret-key`).
 - `EMAIL_FROM`: the verified sender email for resend (defaults to `onboarding@resend.dev`).
 - `REDIS_URL`: your upstash redis rest url.
 - `REDIS_TOKEN`: your upstash redis rest token.
@@ -47,7 +48,8 @@ render's free tier **blocks all outbound smtp traffic** (ports 25, 465, 587). to
 4.  **recipient rule**: on the Resend free tier, you can **only** send emails to the **same email address** you used to sign up for Resend. ensure the email in your `user-course-map.json` matches your Resend account email.
 
 > [!IMPORTANT]
-> if you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard. Otherwise, run this app locally and use SMTP (simply don't set `RESEND_TOKEN` in your `.env`)
+> **render free services** block outbound smtp traffic (ports 25, 465, 587). you **must** use the `RESEND_TOKEN` for notifications to work in production on render.
+> if you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard.
 
 ## usage
 

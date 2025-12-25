@@ -19,6 +19,7 @@ class Config:
         self.email_pass = os.getenv("EMAIL_PASS")
         self.resend_api_key = os.getenv("RESEND_TOKEN")
         self.email_from = os.getenv("EMAIL_FROM", "onboarding@resend.dev") # you will probably only need the default after setting up a resend account 
+        self.api_key = os.getenv("API_KEY")
         self.redis_url = os.getenv("REDIS_URL")
         self.redis_token = os.getenv("REDIS_TOKEN")
         
