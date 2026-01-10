@@ -1,132 +1,135 @@
-# testudot
+# Testudot
 
-## overview
+## Overview
 
-this is a python-based course monitoring application that fetches course section information from the university of maryland's testudo, tracks changes, and sends email notifications when updates occur.
+This is a Python-based course monitoring application that fetches course section information from the University of Maryland's Testudo, tracks changes, and sends email notifications when updates occur.
 
-built for local use and deployment on **render**.
+Built for local use and deployment on **Render**.
 
-## features
+## Features
 
-- **persistence**: environment-based state tracking. uses local json files by default for the cli, with optional upstash redis support for cloud deployments (configurable via `PERSISTENCE_MODE`).
-- **dockerized**: bundles the app using `uv` for fast, reproducible builds.
-- **smart term detection**: automatically targets spring or fall based on the current date (with manual overrides).
-- **fastapi server**: full api for health checks, listing mappings, and triggering monitoring cycles.
-- **automated monitoring**:
-  - tracks **new sections**.
-  - tracks **seat availability changes**.
-  - tracks **section removals**.
-  - sends html email notifications.
+- **Persistence**: Environment-based state tracking. Uses local JSON files by default for the CLI, with optional Upstash Redis support for cloud deployments (configurable via `PERSISTENCE_MODE`).
+- **Dockerized**: Bundles the app using `uv` for fast, reproducible builds.
+- **Smart Term Detection**: Automatically targets Spring or Fall based on the current date (with manual overrides).
+- **FastAPI Server**: Full API for health checks, listing mappings, and triggering monitoring cycles.
+- **Automated Monitoring**:
+  - Tracks **new sections**.
+  - Tracks **seat availability changes**.
+  - Tracks **section removals**.
+  - Sends HTML email notifications.
 
-## setup
+## Setup
 
-this project uses [uv](https://github.com/astral-sh/uv) for extremely fast dependency management.
+This project uses [uv](https://github.com/astral-sh/uv) for extremely fast dependency management.
 
 ```bash
 uv sync
 ```
 
-### environment variables
+### Environment Variables
 
-create a `.env` file with the following:
+Create a `.env` file with the following:
 
-- `EMAIL_USER`: your gmail address (for local SMTP fallback).
-- `EMAIL_PASS`: your gmail **app password** (for local SMTP fallback).
-- `RESEND_TOKEN`: your **resend.com** api key (required for production).
-- `API_KEY`: a secret key of your choice to restrict API access (e.g., `my-super-secret-key`).
-- `EMAIL_FROM`: the verified sender email for resend (defaults to `onboarding@resend.dev`).
-- `REDIS_URL`: your upstash redis rest url.
-- `REDIS_TOKEN`: your upstash redis rest token.
-- `PERSISTENCE_MODE`: set to `redis` or `local` (defaults to `local`).
+- `EMAIL_USER`: Your Gmail address (for local SMTP fallback).
+- `EMAIL_PASS`: Your Gmail **app password** (for local SMTP fallback).
+- `RESEND_TOKEN`: Your **resend.com** API key (required for production).
+- `API_KEY`: A secret key of your choice to restrict API access (e.g., `my-super-secret-key`).
+- `EMAIL_FROM`: The verified sender email for Resend (defaults to `onboarding@resend.dev`).
+- `REDIS_URL`: Your Upstash Redis REST URL.
+- `REDIS_TOKEN`: Your Upstash Redis REST token.
+- `PERSISTENCE_MODE`: Set to `redis` or `local` (defaults to `local`).
 
-### setting up resend (for render/production)
-render's free tier **blocks all outbound smtp traffic** (ports 25, 465, 587). to send notifications from render, you must use the [resend](https://resend.com) http api:
+### Setting up Resend (for Render/Production)
 
-1.  **sign up**: create a free account at [resend.com](https://resend.com).
-2.  **get api key**: create an api key and add it as `RESEND_TOKEN` in your render environment variables.
-3.  **set sender**: by default, resend free accounts can only send from `onboarding@resend.dev`. the application uses this as the default `EMAIL_FROM`.
-4.  **recipient rule**: on the Resend free tier, you can **only** send emails to the **same email address** you used to sign up for Resend. ensure the email in your `user-course-map.json` matches your Resend account email.
+Render's free tier **blocks all outbound SMTP traffic** (ports 25, 465, 587). To send notifications from Render, you must use the [Resend](https://resend.com) HTTP API:
+
+1.  **Sign up**: Create a free account at [resend.com](https://resend.com).
+2.  **Get API key**: Create an API key and add it as `RESEND_TOKEN` in your Render environment variables.
+3.  **Set sender**: By default, Resend free accounts can only send from `onboarding@resend.dev`. The application uses this as the default `EMAIL_FROM`.
+4.  **Recipient rule**: On the Resend free tier, you can **only** send emails to the **same email address** you used to sign up for Resend. Ensure the email in your `user-course-map.json` matches your Resend account email.
 
 > [!IMPORTANT]
-> if you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard.
+> If you want to send notifications to multiple people or different addresses, you must verify a custom domain in the Resend dashboard.
 
-### api security
-to prevent unauthorized users from triggering your monitor or viewing your mappings, you can set an `API_KEY` environment variable.
+### API Security
 
-1. **set the key**: add `API_KEY` to your render environment variables with a secret value.
-2. **use the header**: when making requests to `/api/monitor` or `/api/mappings`, include the `X-API-Key` header:
+To prevent unauthorized users from triggering your monitor or viewing your mappings, you can set an `API_KEY` environment variable.
+
+1. **Set the key**: Add `API_KEY` to your Render environment variables with a secret value.
+2. **Use the header**: When making requests to `/api/monitor` or `/api/mappings`, include the `X-API-Key` header:
    ```bash
    curl -X POST https://your-app.onrender.com/api/monitor \
      -H "X-API-Key: your-secret-key"
    ```
 > [!NOTE]
-> the `/api/health` endpoint remains public so you can perform health checks if needed.
+> The `/api/health` endpoint remains public so you can perform health checks if needed.
 
-## usage
+## Usage
 
-### cli
+### CLI
 
 ```bash
-# add a mapping
+# Add a mapping
 uv run main.py add
 
-# list current mappings
+# List current mappings
 uv run main.py list-mappings
 
-# start the monitor locally (continuous loop)
+# Start the monitor locally (continuous loop)
 uv run main.py monitor --interval 15
 
-# run the monitor once (ideal for cron)
+# Run the monitor once (ideal for cron)
 uv run main.py monitor --once
 
-# start the api server
+# Start the API server
 uv run main.py serve
 
-# set default persistence mode via config file
+# Set default persistence mode via config file
 uv run main.py config --mode redis
 ```
 
-notes:
-- mappings live in `user-course-map.json`. update this file locally and push to trigger changes in production.
-- the `monitor` command prompts for a term id by default. use `--no-prompt` or `--once` for non-interactive runs.
+Notes:
+- Mappings live in `user-course-map.json`. Update this file locally and push to trigger changes in production.
+- The `monitor` command prompts for a term ID by default. Use `--no-prompt` or `--once` for non-interactive runs.
 
-### api endpoints
+### API Endpoints
 
-- `GET /api/mappings`: list all bundled course mappings.
-- `POST /api/monitor`: trigger a single monitoring cycle.
-- `GET /api/health`: service health status.
+- `GET /api/mappings`: List all bundled course mappings.
+- `POST /api/monitor`: Trigger a single monitoring cycle.
+- `GET /api/health`: Service health status.
 
-## deployment
+## Deployment
 
-### render
+### Render
 
-this project is designed to be deployed to **render** using the provided [render.yaml](render.yaml) blueprint.
+This project is designed to be deployed to **Render** using the provided [render.yaml](render.yaml) blueprint.
 
-1. **connect repository**: connect your github repository to render.
-2. **blueprint**: render will automatically detect the blueprint and provision a **web service** (api).
-3. **secrets**: set your `EMAIL_USER`, `EMAIL_PASS`, `REDIS_URL`, `REDIS_TOKEN`, and `API_KEY` in the render dashboard.
+1. **Connect repository**: Connect your GitHub repository to Render.
+2. **Blueprint**: Render will automatically detect the blueprint and provision a **web service** (API).
+3. **Secrets**: Set your `EMAIL_USER`, `EMAIL_PASS`, `REDIS_URL`, `REDIS_TOKEN`, and `API_KEY` in the Render dashboard.
 
-#### automation (github actions)
+#### Automation (GitHub Actions)
 
-to trigger the monitor every 30 minutes for free, use the included github action:
+To trigger the monitor every 30 minutes for free, use the included GitHub Action:
 
-1. **github secrets**: in your repo settings, go to `Settings > Secrets and variables > Actions` and add:
-   - `RENDER_URL`: your app's public url (e.g., `https://testudot.onrender.com`).
-   - `API_KEY`: the same secret key you set in render.
-2. **enable**: the action in `.github/workflows/monitor.yml` will now run automatically every 30 minutes.
+1. **GitHub Secrets**: In your repo settings, go to `Settings > Secrets and variables > Actions` and add:
+   - `RENDER_URL`: Your app's public URL (e.g., `https://testudot.onrender.com`).
+   - `API_KEY`: The same secret key you set in Render.
+2. **Enable**: The action in `.github/workflows/monitor.yml` will now run automatically every 30 minutes.
 
-## term detection
+## Term Detection
 
-- **heuristic**: maps oct-feb to spring (`01`) and march-sept to fall (`08`).
-- **override**: to target summer (`05`) or winter (`12`), use the `--term` flag in the cli or provide it via the api.
+- **Heuristic**: Maps Oct-Feb to Spring (`01`) and March-Sept to Fall (`08`).
+- **Override**: To target Summer (`05`) or Winter (`12`), use the `--term` flag in the CLI or provide it via the API.
 
-## architecture
+## Architecture
 
-- **core**: beautifulsoup4 (scraping), upstash-redis (state)
-- **api**: fastapi + uvicorn
-- **cli**: typer + rich
-- **deployment**: render (docker runtime)
+- **Core**: BeautifulSoup4 (scraping), Upstash-Redis (state)
+- **API**: FastAPI + Uvicorn
+- **CLI**: Typer + Rich
+- **Deployment**: Render (Docker runtime)
 
-## license
+## License
 
-mit license.
+MIT License.
+
